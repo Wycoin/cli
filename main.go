@@ -17,7 +17,7 @@ func main() {
     app.Commands = []cli.Command {
         {
             Name: "create",
-            Aliases: []string{"c", "login"},
+            Aliases: []string{"login", "c", "l"},
             Usage: "create a new account",
             Action: func(c *cli.Context) error {
                 if checkHasAccount() {
