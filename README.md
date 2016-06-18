@@ -9,7 +9,7 @@ VERSION:
    0.1.0
    
 COMMANDS:
-     create, c, login  create a new account
+     create, login, c  create a new account
      balance, b        complete a task on the list
      transfer, t       create a new transfer
 
