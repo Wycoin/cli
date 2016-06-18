@@ -1,11 +1,19 @@
 ```bash
-Usage:
+NAME:
+   wyllet - wycoin wallet cli
 
-    wyllet <command> [--help] [--version]
-  
-The commands are:
+USAGE:
+   wyllet [global options] command [command options] [arguments...]
+   
+VERSION:
+   0.1.0
+   
+COMMANDS:
+     create, c, login  create a new account
+     balance, b        complete a task on the list
+     transfer, t       create a new transfer
 
-    create                          create a new account
-    balance                         show your account address and balance
-    transfer <amount> <address>     transfer an amount to another account
+GLOBAL OPTIONS:
+   --help, -h     show help
+   --version, -v  print the version
 ```
