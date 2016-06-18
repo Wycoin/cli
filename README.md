@@ -1,4 +1,4 @@
-```bash
+```
 NAME:
    wyllet - wycoin wallet cli
 
