@@ -46,12 +46,12 @@ and the path to your private key below and we'll get you set up.
     fmt.Println(username)
 
     pvtKeyPath := askForInput("Path to private key: ")
-    pvtKeyPath = strings.TrimSpace(keyPath)
+    pvtKeyPath = strings.TrimSpace(pvtKeyPath)
 
     if fileExists(pvtKeyPath) {
 
         pblKeyPath := askForInput("Path to public key: ")
-        pblKeyPath = strings.TrimSpace(keyPath)
+        pblKeyPath = strings.TrimSpace(pblKeyPath)
 
         if fileExists(pblKeyPath) {
 
@@ -79,9 +79,11 @@ and the path to your private key below and we'll get you set up.
 
                 //send public key to entry node
                 fmt.Println("Sending public key to entry node ("+entryNodeURL+")...")
-                postJSON(entryNodeURL, "{ \"publicKey\": \""+pblKey+"\" }")
+                //postJSON(entryNodeURL, "{ \"publicKey\": \""+pblKey+"\" }")
 
-                if err != nil {
+                err := ""
+
+                if err != "" {
                     //if request fails, remove config
                     rmConfig()
                     fmt.Println("The request to the entrynode could not be completed.")

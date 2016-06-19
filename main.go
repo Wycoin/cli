@@ -47,7 +47,13 @@ func main() {
                     amount := c.Args()[0]
                     address := c.Args()[1]
 
-                    fmt.Println(amount, address)
+                    config := getConfig()
+
+                    url := config.EntryNodeURL+"/transaction/"+config.Address+"/"+address+"/"+amount
+
+                    fmt.Println("Sending request to entry node... ("+url+")")
+                    httpGet(url)
+                    fmt.Println("Sent.")
                 } else {
                     fmt.Println("usage: wyllet transfer <amount> <address>")
                 }
