@@ -1,5 +1,6 @@
-### Setup
 ```bash
-curl https://raw.githubusercontent.com/Wycoin/wyllet-cli/master/bin/wyllet > /usr/local/bin/wyllet
+g clone git@github.com:Wycoin/wyllet-cli.git
+cd wyllet-cli
+go install
 wyllet --help
 ```
